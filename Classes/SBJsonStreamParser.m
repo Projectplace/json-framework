@@ -57,10 +57,6 @@
 	return self;
 }
 
-- (void)dealloc {
-    self.state = nil;
-}
-
 #pragma mark Methods
 
 - (NSString*)tokenName:(sbjson_token_t)token {
@@ -115,7 +111,7 @@
 }
 
 - (void)maxDepthError {
-    self.error = [NSString stringWithFormat:@"Input depth exceeds max depth of %lu", maxDepth];
+    self.error = [NSString stringWithFormat:@"Input depth exceeds max depth of %u", maxDepth];
     self.state = [SBJsonStreamParserStateError sharedInstance];
 }
 

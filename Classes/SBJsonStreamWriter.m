@@ -72,10 +72,6 @@ static NSNumber *kNegativeInfinity;
 	return self;
 }
 
-- (void)dealloc {
-    self.state = nil;
-}
-
 #pragma mark Methods
 
 - (void)appendBytes:(const void *)bytes length:(NSUInteger)length {
